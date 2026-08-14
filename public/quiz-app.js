@@ -1,6 +1,7 @@
 (function(){
 const root=document.getElementById('app'),params=new URLSearchParams(location.search),view=root.dataset.view||(location.pathname.startsWith('/host')?'host':'player');
-const base=(params.get('server')||root.dataset.realtimeUrl||window.REALTIME_SERVER_URL||location.origin).replace(/\/$/,'');
+const DEFAULT_REALTIME_SERVER='https://freedomchallenge-2026.onrender.com';
+const base=(params.get('server')||root.dataset.realtimeUrl||window.REALTIME_SERVER_URL||DEFAULT_REALTIME_SERVER).replace(/\/$/,'');
 let socket,state,locked=false,error='',timer,hostToken=params.get('token')||localStorage.hostToken||'',sessionToken=localStorage.playerSessionToken||'';
 const esc=s=>String(s??'').replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
 const fmt=ms=>Math.max(0,Math.ceil(ms/1000));
