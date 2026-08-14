@@ -1,0 +1,15 @@
+services:
+  - type: web
+    name: freedom-challenge-2026
+    runtime: node
+    plan: starter
+    buildCommand: npm install
+    startCommand: npm start
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_VERSION
+        value: 22
+      - key: HOST_TOKEN
+        generateValue: true
+      - key: ALLOWED_ORIGINS
+        value: "*"

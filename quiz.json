@@ -1,0 +1,20 @@
+{
+  "title": "Freedom Challenge — India Independence Day 2026",
+  "questions": [
+    {"id":"q1","text":"On which date did India become independent?","options":["15 August 1947","26 January 1950","9 August 1942","22 July 1947"],"correctIndex":0,"explanation":"India gained independence from British rule on 15 August 1947."},
+    {"id":"q2","text":"Who was independent India's first Prime Minister?","options":["Sardar Patel","Jawaharlal Nehru","Rajendra Prasad","B. R. Ambedkar"],"correctIndex":1,"explanation":"Jawaharlal Nehru served as India's first Prime Minister."},
+    {"id":"q3","text":"Who delivered the 'Tryst with Destiny' speech?","options":["Mahatma Gandhi","Subhas Chandra Bose","Jawaharlal Nehru","Sarojini Naidu"],"correctIndex":2,"explanation":"Nehru delivered the speech at midnight on 14–15 August 1947."},
+    {"id":"q4","text":"Where is the national Independence Day address traditionally delivered?","options":["India Gate","Parliament House","Rashtrapati Bhavan","Red Fort"],"correctIndex":3,"explanation":"The Prime Minister addresses the nation from Delhi's Red Fort."},
+    {"id":"q5","text":"Who hoists the national flag at the Red Fort on Independence Day?","options":["The President","The Prime Minister","The Chief Justice","The Defence Minister"],"correctIndex":1,"explanation":"The Prime Minister hoists the flag and addresses the nation."},
+    {"id":"q6","text":"When was India's national flag adopted by the Constituent Assembly?","options":["15 August 1947","26 January 1950","22 July 1947","2 October 1947"],"correctIndex":2,"explanation":"The present form of the national flag was adopted on 22 July 1947."},
+    {"id":"q7","text":"How many spokes are in the Ashoka Chakra?","options":["12","18","24","32"],"correctIndex":2,"explanation":"The navy-blue Ashoka Chakra has 24 spokes."},
+    {"id":"q8","text":"In which year did the Dandi March take place?","options":["1919","1925","1930","1942"],"correctIndex":2,"explanation":"Gandhi led the Dandi March in 1930."},
+    {"id":"q9","text":"What did the Dandi March protest?","options":["Salt laws","Land taxes","Press censorship","Partition"],"correctIndex":0,"explanation":"The march challenged the British monopoly and tax on salt."},
+    {"id":"q10","text":"In which year was the Quit India Movement launched?","options":["1930","1935","1942","1946"],"correctIndex":2,"explanation":"The Quit India Movement began in August 1942."},
+    {"id":"q11","text":"Jallianwala Bagh is located in which city?","options":["Delhi","Amritsar","Kolkata","Lucknow"],"correctIndex":1,"explanation":"Jallianwala Bagh is in Amritsar, Punjab."},
+    {"id":"q12","text":"What is India's National Anthem?","options":["Vande Mataram","Sare Jahan Se Achha","Jana Gana Mana","Ae Mere Watan Ke Logon"],"correctIndex":2,"explanation":"Jana Gana Mana is the National Anthem of India."},
+    {"id":"q13","text":"Who wrote Jana Gana Mana?","options":["Bankim Chandra Chattopadhyay","Rabindranath Tagore","Muhammad Iqbal","Sarojini Naidu"],"correctIndex":1,"explanation":"Rabindranath Tagore composed Jana Gana Mana."},
+    {"id":"q14","text":"15 August 2026 marks which Independence Day of India?","options":["78th","79th","80th","81st"],"correctIndex":2,"explanation":"2026 marks India's 80th Independence Day, counting 1947 as the first observance."},
+    {"id":"q15","text":"Which patriotic song completes 150 years in 2026?","options":["Jana Gana Mana","Vande Mataram","Sare Jahan Se Achha","Kadam Kadam Badhaye Ja"],"correctIndex":1,"explanation":"Vande Mataram was composed in 1876, making 2026 its 150th year."}
+  ]
+}
