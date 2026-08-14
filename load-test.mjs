@@ -1,10 +1,10 @@
 import { io } from 'socket.io-client';
 import { performance } from 'node:perf_hooks';
-const url=process.env.TEST_URL||'http://127.0.0.1:3000',pin=process.env.GAME_PIN||'123456',hostToken=process.env.HOST_TOKEN||'load-test-secret',N=Number(process.env.PLAYERS||200);
+const url=process.env.TEST_URL||'http://127.0.0.1:3000',hostToken=process.env.HOST_TOKEN||'load-test-secret',N=Number(process.env.PLAYERS||200);
 const clients=[],players=[];let failed=0,acks=0,dupes=0;const latencies=[],answerTimes=[];
 const emitAck=(s,e,p)=>new Promise((resolve,reject)=>{const t=performance.now();s.timeout(5000).emit(e,p,(err,r)=>{if(err)return reject(err);latencies.push(performance.now()-t);resolve(r)})});
 for(let i=0;i<N;i++)clients.push(io(url,{transports:['websocket'],reconnection:true,timeout:5000,forceNew:true}));
-await Promise.all(clients.map((s,i)=>new Promise(resolve=>{let done=false;const finish=()=>{if(!done){done=true;resolve()}};const timeout=setTimeout(()=>{failed++;finish()},10000);s.on('connect',async()=>{try{const r=await emitAck(s,'join',{pin,nickname:`Player ${i+1}`});if(r.ok)players[i]=r;else failed++}catch{failed++}clearTimeout(timeout);finish()});s.on('connect_error',()=>{});} )));
+await Promise.all(clients.map((s,i)=>new Promise(resolve=>{let done=false;const finish=()=>{if(!done){done=true;resolve()}};const timeout=setTimeout(()=>{failed++;finish()},10000);s.on('connect',async()=>{try{const r=await emitAck(s,'join',{nickname:`Player ${i+1}`});if(r.ok)players[i]=r;else failed++}catch{failed++}clearTimeout(timeout);finish()});s.on('connect_error',()=>{});} )));
 if(failed)throw new Error(`${failed} clients failed to connect or join`);
 const host=io(url,{transports:['websocket'],forceNew:true});await new Promise(r=>host.on('connect',r));await emitAck(host,'host:join',{token:hostToken});
 let latest;host.on('state',s=>latest=s);await emitAck(host,'host:action',{token:hostToken,action:'start',auto:false});
