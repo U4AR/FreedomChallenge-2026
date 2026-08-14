@@ -9,7 +9,7 @@ npm install
 npm start
 ```
 
-Open the printed host URL. Phones on the same Wi-Fi scan its QR code. Set `HOST_TOKEN` to keep the host URL stable across restarts.
+Open the printed host URL. Phones on the same Wi-Fi scan its QR code and enter only a nickname; this single-game deployment does not use a public game PIN. Set `HOST_TOKEN` to keep the host URL stable across restarts.
 
 ## Render
 
